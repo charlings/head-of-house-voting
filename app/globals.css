@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #14213D;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(242, 169, 59, 0.10), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(27, 153, 139, 0.14), transparent 45%);
+  background-attachment: fixed;
+}
+
+/* Visible keyboard focus everywhere, on top of daisyUI defaults */
+:focus-visible {
+  outline: 2px solid #F2A93B;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.ballot-texture {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(20, 33, 61, 0.035) 0px,
+    rgba(20, 33, 61, 0.035) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
